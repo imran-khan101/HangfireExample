@@ -1,0 +1,17 @@
+@HangfireExample_HostAddress = https://localhost:7002
+
+# Enqueue a Background Job
+POST {{HangfireExample_HostAddress}}/api/job/enqueue
+Content-Type: application/json
+
+###
+
+# Schedule a Background Job
+POST {{HangfireExample_HostAddress}}/api/job/schedule
+Content-Type: application/json
+
+###
+
+# Get Hangfire Dashboard (if exposed for testing)
+GET {{HangfireExample_HostAddress}}/hangfire
+Accept: text/html
